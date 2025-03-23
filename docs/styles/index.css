@@ -11,7 +11,7 @@ html{
 
 body{
     height: 100vh;
-    background-color: #137A6A;
+    background-color: #FFF3EC;
 }
 
 img{
@@ -20,15 +20,10 @@ img{
 
 main {
     height: auto;
-    width: 80%;
+    width: 90%;
     margin: 1.3rem auto;
-    padding: 1.3rem;
     display: flex;
     flex-direction: column; 
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
-    background-color: #FFF3EC;
-    border-radius: 5px;
-    border: #0E3B30 2px solid;
 }
 
 header, footer{
@@ -36,78 +31,96 @@ header, footer{
     width: 100%;
     height: auto;
     color: white;
-    padding: 2rem;
+    padding: 3.5rem 3rem;
+    display: flex;
+    justify-content: end;
+}
+
+footer{
+    margin-top: 5rem;
+}
+
+.login-button{
+    width: auto;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    background-color: #FFF3EC;
+    color: #0E3B30;
 }
 
 .first-section {
     display: grid;
     grid-template-columns: minmax(230px, 1fr) 2fr;
-    gap: 2rem;
+    gap: 8rem;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
-    border-radius: 5px;
-    padding: 2rem;
+    width: 100%;
+    padding: 5rem 5%;
+    background-image: url("../img/hero.jpg");
+    background-color: rgba(14, 59, 48, 0.9);
+    background-blend-mode: multiply;
+    height: 65%;
+    background-size: cover ;
+}
+
+.item{
+    margin-bottom: 4rem;
+}
+
+.first-content-container{
+    width: 80%;
+    margin: 1.3rem auto;
     height: auto;
-    background-color: white;
 }
 
 .first-element_1{
-    padding: 1rem;
-    padding-left: 1.5rem;
+    padding: 1rem 0;
     align-content: center;
 }
 
-.first-element_img{
-    place-self: center;
+.first-element_nav{
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin: 2rem;
 }
 
-.first-element_img img{
-  border-radius: 5px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
-  width: 100%;
-  height: 100%;
-  display: block;
+.first-element_nav ul{
+   display: flex;
+   list-style: none;
+}
+
+.first-element_nav ul li{
+    margin: 0 1.6rem;
+    color:white;
+    font-size: 2.1rem;
+}
+
+.first-element_nav ul li:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 button{
-    padding: 1rem;
-    background-color: #137A6A;
+    padding: 2rem;
+    background-color: #CB8B28;
     color: white;
     border: none;
     border-radius: 7px;
     cursor: pointer;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.8rem;
     font-weight: bold;
-}
-
-@media screen and (max-width:920px) {
-    .first-section {
-        grid-template-columns: minmax(100px, 1fr);
-    }
-    .first-element_img{
-        display: none;
-    }
-
-    .our-services{
-        display: grid;
-        grid-template-columns: minmax(150px, 1fr); 
-        gap: 1rem;
-    }
-    .our-services-pandebono{
-        grid-area: 1/1/2/2;
-    }
 }
 
 .our-services{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr)); 
     gap: 1rem;
 }
 
 .our-services article{
     width: 100%;
     height: 100%;
-    padding: 1rem;
     place-self: center;
 }
 
@@ -130,21 +143,16 @@ button{
 
 .branch-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
     gap:1rem;
 }
 
 .branch-container article{
-    padding: 1rem;
     place-self: center;
-}
-
-.branch-container-img_container{
     width: 100%;
     height: 100%;
     align-content: center;
 }
-
 .branch-container img{
     height: 100%;
     width: 100%;
@@ -152,11 +160,26 @@ button{
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
 }
 
-h1{
-    font-size: 2.2rem;
+.title{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.section-title{
+    font-size: 3.3rem;
+    font-weight: bold;
     color: #0E3B30;
     border-bottom: #0E3B30 solid 1.5px;
-    padding-bottom: 1rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.title-hero{
+    font-size: 3.8rem;
+    color: white;
+    border-bottom: #ffffff solid 1.5px;
+    padding-bottom: 2rem;
 }
 
 h2{
@@ -168,10 +191,80 @@ h2{
 }
 
 p{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    color: white;
 }
 
-.divider{
-    border-top: #0E3B30 dashed 1.5px;
-    margin: 3rem 0 0 0;
+@media screen and (max-width:920px) {
+    .first-section {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav"
+        "hero-content";
+        gap:0;
+        height: auto;
+    }
+
+    .first-element_1{
+        grid-area: hero-content;
+    }
+
+    .first-element_nav{
+        place-self: start;
+        grid-area: nav;
+        width: 100%;
+    }
+
+    .first-element_nav ul{
+        display: flex;
+        list-style: none;
+     }
+
+     .first-element_nav ul li{
+        margin: 0;
+        padding: 0;
+        flex:1;
+     }
+
+    .first-element_img{
+        display: none;
+    }
+
+    .our-services-pandebono{
+        grid-area: pandebono;
+    }
+
+    .champus{
+        grid-area: champus;
+    }
+
+    .lulada{
+        grid-area: lulada;
+    }
+
+    .mondongo{
+        grid-area: mondongo;
+    }
+
+    .marranitas{
+        grid-area: marranitas;
+    }
+
+    .our-services{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-areas: 
+        "pandebono"
+        "champus"
+        "lulada"
+        "mondongo"
+        "marranitas";
+        gap: 1rem;
+    }
+
+    .branch-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap:1rem;
+    }
 }
